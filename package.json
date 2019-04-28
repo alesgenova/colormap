@@ -2,9 +2,14 @@
   "name": "color-mapping",
   "version": "1.0.0",
   "description": "Flexible library to map scalar values to colors",
-  "module": "esm/index.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "test": "jest --coverage"
   },
   "author": "Alessandro Genova",
@@ -12,6 +17,8 @@
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "jest": "^24.7.1",
+    "rollup": "^1.10.1",
+    "rollup-plugin-typescript2": "^0.21.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   }
