@@ -61,7 +61,6 @@
   },
   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
-    "**/*.d.ts"
+    "**/*.spec.ts"
   ]
 }
