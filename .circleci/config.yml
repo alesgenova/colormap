@@ -3,6 +3,7 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+
 jobs:
   build:
     docker:
@@ -29,5 +30,6 @@ jobs:
 
       # run tests!
       - run: yarn test
-      - store_artifacts:
-          path: coverage
+      - run:
+          name: Coverage
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
