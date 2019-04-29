@@ -9,11 +9,6 @@ export {
 } from './scales';
 
 export {
-  viridis,
-  blackWhite
-} from './colors';
-
-export {
   Range,
   RGBColor,
   RGBAColor,
@@ -22,3 +17,5 @@ export {
   ColorMap,
   MapMode
 } from './types';
+
+export * from './presets';

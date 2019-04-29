@@ -47,3 +47,16 @@ let values = [0, 25, 50, 75, 100];
 let output = values.map(v => colorMap(v));
 // output is [[0,0,1], [0.75,0,0.25], [0,1,0], [0,0.5,0.5], [0,0,1]]
 ```
+
+## Preset Colormaps
+This package exports a few selected colormaps from `matplotlib`. See `src/presets/index.ts` for a list of available presets.
+```javascript
+import { createColorMap, linearScale, VIRIDIS } from "color-mapping";
+
+let domain = [0, 100];
+let range = [0, 1];
+let scale = linearScale(VIRIDIS, range);
+let colorMap = createColorMap(colors, scale);
+let output = [0, 1].map(v => colorMap(v));
+// output is [[0.267004, 0.004874, 0.329415], [0.993248, 0.906157, 0.143936]]
+```
