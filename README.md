@@ -1,18 +1,30 @@
-[![npm package](https://img.shields.io/npm/v/color-mapping.svg)](https://www.npmjs.com/package/color-mapping)
-[![CircleCI](https://circleci.com/gh/alesgenova/color-mapping/tree/master.svg?style=shield)](https://circleci.com/gh/alesgenova/color-mapping/tree/master)
-[![codecov](https://codecov.io/gh/alesgenova/color-mapping/branch/master/graph/badge.svg)](https://codecov.io/gh/alesgenova/color-mapping)
+[![CircleCI](https://circleci.com/gh/alesgenova/colormap/tree/master.svg?style=shield)](https://circleci.com/gh/alesgenova/colormap/tree/master)
+[![codecov](https://codecov.io/gh/alesgenova/colormap/branch/master/graph/badge.svg)](https://codecov.io/gh/alesgenova/colormap)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
-# color-mapping
+# ColorMap
 A flexible library to map numerical values to colors
 
+## Packages
+| Package | Version | Description |
+| ------- | ------- |:-----:|
+| [`@colormap/core`](packages/core) | [![npm package](https://img.shields.io/npm/v/@colormap/core.svg)](https://www.npmjs.com/package/@colormap/core) | Core functions and utilities
+| [`@colormap/presets`](packages/presets) | [![npm package](https://img.shields.io/npm/v/@colormap/presets.svg)](https://www.npmjs.com/package/@colormap/presets) | Popular predefined colormaps
+
 ## Install
+Install the `@colormap/core` package
 ```
-npm install -S color-mapping
+npm install -S @colormap/core
+```
+
+Optionally install `@colormap/preset` to have popular colormaps from [matplotlib](https://matplotlib.org/tutorials/colors/colormaps.html) readily available
+```
+npm install -S @colormap/preset
 ```
 
 ## Basic Usage
 ```javascript
-import { createColorMap, linearScale } from "color-mapping";
+import { createColorMap, linearScale } from "@colormap/core";
 
 let colors = [
   [1, 0, 0],
@@ -31,7 +43,7 @@ let output = values.map(v => colorMap(v));
 ## Advanced Usage
 The colors array doesn't necessarily need to span evenly the `[0, 1]` interval.
 ```javascript
-import { createColorMap, linearScale } from "color-mapping";
+import { createColorMap, linearScale } from "@colormap/core";
 
 let colors = [
   { value: -1.0, color: [0, 0, 1] },
@@ -49,9 +61,10 @@ let output = values.map(v => colorMap(v));
 ```
 
 ## Preset Colormaps
-This package exports a few selected colormaps from `matplotlib`. See `src/presets/index.ts` for a list of available presets.
+A set of popular colormaps from `matplotlib` are exported by the `@colormap/presets` package. See `packages/presets/src/index.ts` for a list of available presets.
 ```javascript
-import { createColorMap, linearScale, VIRIDIS } from "color-mapping";
+import { createColorMap, linearScale } from "@colormap/core";
+import { VIRIDIS } from "@colormap/presets";
 
 let domain = [0, 100];
 let range = [0, 1];

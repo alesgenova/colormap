@@ -17,5 +17,3 @@ export {
   ColorMap,
   MapMode
 } from './types';
-
-export * from './presets';
