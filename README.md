@@ -1,9 +1,15 @@
-[![npm package](https://img.shields.io/npm/v/@colormap/core.svg)](https://www.npmjs.com/package/@colormap/core)
 [![CircleCI](https://circleci.com/gh/alesgenova/colormap/tree/master.svg?style=shield)](https://circleci.com/gh/alesgenova/colormap/tree/master)
 [![codecov](https://codecov.io/gh/alesgenova/colormap/branch/master/graph/badge.svg)](https://codecov.io/gh/alesgenova/colormap)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
-# color-mapping
+# ColorMap
 A flexible library to map numerical values to colors
+
+## Packages
+| Package | Version | Description |
+| ------- | ------- |:-----:|
+| [`@colormap/core`](packages/core) | [![npm package](https://img.shields.io/npm/v/@colormap/core.svg)](https://www.npmjs.com/package/@colormap/core) | Core functions and utilities
+| [`@colormap/presets`](packages/presets) | [![npm package](https://img.shields.io/npm/v/@colormap/presets.svg)](https://www.npmjs.com/package/@colormap/presets) | Popular predefined colormaps
 
 ## Install
 Install the `@colormap/core` package
