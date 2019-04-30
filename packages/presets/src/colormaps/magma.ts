@@ -1,4 +1,4 @@
-import { RGBColor } from '../types';
+import { RGBColor } from '@colormap/core';
 
 const colors : RGBColor[] = [
   [0.001462, 0.000466, 0.013866],
