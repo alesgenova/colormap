@@ -1,4 +1,4 @@
-[![npm package](https://img.shields.io/npm/v/color-mapping.svg)](https://www.npmjs.com/package/@colormap/core)
+[![npm package](https://img.shields.io/npm/v/@colormap/core.svg)](https://www.npmjs.com/package/@colormap/core)
 [![CircleCI](https://circleci.com/gh/alesgenova/colormap/tree/master.svg?style=shield)](https://circleci.com/gh/alesgenova/colormap/tree/master)
 [![codecov](https://codecov.io/gh/alesgenova/colormap/branch/master/graph/badge.svg)](https://codecov.io/gh/alesgenova/colormap)
 
@@ -6,8 +6,14 @@
 A flexible library to map numerical values to colors
 
 ## Install
+Install the `@colormap/core` package
 ```
-npm install -S color-mapping
+npm install -S @colormap/core
+```
+
+Optionally install `@colormap/preset` to have popular colormaps from [matplotlib](https://matplotlib.org/tutorials/colors/colormaps.html) readily available
+```
+npm install -S @colormap/preset
 ```
 
 ## Basic Usage
