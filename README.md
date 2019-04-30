@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/alesgenova/colormap/tree/master.svg?style=shield)](https://circleci.com/gh/alesgenova/colormap/tree/master)
 [![codecov](https://codecov.io/gh/alesgenova/colormap/branch/master/graph/badge.svg)](https://codecov.io/gh/alesgenova/colormap)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/alesgenova/colormap.svg)](https://lgtm.com/projects/g/alesgenova/colormap/context:javascript)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 # ColorMap
