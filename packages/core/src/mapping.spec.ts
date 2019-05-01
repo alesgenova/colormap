@@ -1,76 +1,13 @@
 import { ColorNode, RGBColor, Scale, ColorMap } from './types';
-import { findIndex, createColorMap, createColorMapFromColors, createColorMapFromColorNodes } from './mapping';
+import { createColorMap, createColorMapFromColors, createColorMapFromColorNodes } from './mapping';
 import { linearScale } from './scales';
+import { toEachBeCloseTo } from './common.spec';
 
 expect.extend({
-  toEachBeCloseTo(received: number[], expected: number[], digits: number = 2) {
-    if (received.length !== expected.length) {
-      return {
-        pass: false,
-        message: () => `expected ${received} to have the same size as ${expected}`
-      }
-    }
-
-    const isCloseTo = (a: number, b: number, threshold: number) : boolean => {
-      return Math.abs(a - b) < threshold;
-    }
-
-    const threshold = 1 / (Math.pow(10, digits));
-    for (let i = 0; i < received.length; ++i) {
-      if (!isCloseTo(received[i], expected[i], threshold)) {
-        return {
-          pass: false,
-          message: () => `expected each element of ${JSON.stringify(received)} to be close to the elements of ${JSON.stringify(expected)}`
-        }
-      }
-    }
-    return {
-      pass: true,
-      message: () => `expected not each element of ${JSON.stringify(received)} to be close to the elements of ${JSON.stringify(expected)}`
-    }
-  }
+  toEachBeCloseTo
 });
 
 const anyExpect = expect as any;
-
-test('findIndex', () => {
-  const colors: ColorNode[] = [ 
-    {value: 0.0, color: [0, 0, 0]}, // index = 0
-    {value: 0.1, color: [0, 0, 0]}, // index = 1
-    {value: 0.2, color: [0, 0, 0]}, // index = 2
-    {value: 0.3, color: [0, 0, 0]}, // index = 3
-    {value: 0.4, color: [0, 0, 0]}, // index = 4
-    {value: 0.5, color: [0, 0, 0]}, // index = 5
-    {value: 0.6, color: [0, 0, 0]}, // index = 6
-    {value: 0.7, color: [0, 0, 0]}, // index = 7
-    {value: 0.8, color: [0, 0, 0]}, // index = 8
-    {value: 0.9, color: [0, 0, 0]}, // index = 9
-    {value: 1.0, color: [0, 0, 0]}  // index = 10
-  ];
-
-  let index: number;
-
-  index = findIndex(colors, 0.0, 0, colors.length - 1);
-  expect(index).toBe(0);
-
-  index = findIndex(colors, 0.05, 0, colors.length - 1);
-  expect(index).toBe(0);
-
-  index = findIndex(colors, 0.88, 0, colors.length - 1);
-  expect(index).toBe(8);
-
-  index = findIndex(colors, 0.9, 0, colors.length - 1);
-  expect(index).toBe(9);
-
-  index = findIndex(colors, 1.0, 0, colors.length - 1);
-  expect(index).toBe(10);
-
-  index = findIndex(colors, 1.2, 0, colors.length - 1);
-  expect(index).toBe(10);
-
-  index = findIndex(colors, -0.2, 0, colors.length - 1);
-  expect(index).toBe(0);
-});
 
 test('createColorMapFromColors', () => {
   let colors : RGBColor[];

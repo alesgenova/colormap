@@ -1,7 +1,12 @@
 export {
-  createColorMap,
-  createColorMapFromColors,
-  createColorMapFromColorNodes
+  linearMixer,
+  floorMixer,
+  ceilMixer,
+  roundMixer
+} from './common';
+
+export {
+  createColorMap
 } from './mapping';
 
 export {
