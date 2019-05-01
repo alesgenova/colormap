@@ -1,7 +1,14 @@
 export {
+  linearMixer,
+  floorMixer,
+  ceilMixer,
+  roundMixer
+} from './common';
+
+export {
   createColorMap,
-  createColorMapFromColors,
-  createColorMapFromColorNodes
+  createOpacityMap,
+  createColorOpacityMap
 } from './mapping';
 
 export {
@@ -15,5 +22,7 @@ export {
   ColorNode,
   Scale,
   ColorMap,
-  MapMode
+  OpacityMap,
+  ColorOpacityMap,
+  Mixer
 } from './types';
