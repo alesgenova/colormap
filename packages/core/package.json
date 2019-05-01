@@ -1,6 +1,6 @@
 {
   "name": "@colormap/core",
-  "version": "0.1.0-2",
+  "version": "0.1.0-3",
   "description": "Flexible library to map scalar values to colors",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",

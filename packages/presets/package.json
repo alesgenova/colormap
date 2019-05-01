@@ -1,6 +1,6 @@
 {
   "name": "@colormap/presets",
-  "version": "0.1.0-2",
+  "version": "0.1.0-3",
   "description": "Flexible library to map scalar values to colors",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/alesgenova/colormap",
   "devDependencies": {
-    "@colormap/core": "^0.1.0-2",
+    "@colormap/core": "^0.1.0-3",
     "rollup": "^1.10.1",
     "rollup-plugin-typescript2": "^0.21.0",
     "typescript": "^3.4.5"
