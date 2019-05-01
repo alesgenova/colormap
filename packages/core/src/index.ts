@@ -6,7 +6,9 @@ export {
 } from './common';
 
 export {
-  createColorMap
+  createColorMap,
+  createOpacityMap,
+  createColorOpacityMap
 } from './mapping';
 
 export {
@@ -20,5 +22,7 @@ export {
   ColorNode,
   Scale,
   ColorMap,
-  MapMode
+  OpacityMap,
+  ColorOpacityMap,
+  Mixer
 } from './types';

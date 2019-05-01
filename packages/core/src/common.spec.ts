@@ -1,5 +1,5 @@
 import { findIndex, linearMixer, floorMixer, ceilMixer, roundMixer } from './common';
-import { FunctionNode, Vec2 } from './types';
+import { BaseNode, Vec2 } from './types';
 
 export function toEachBeCloseTo(received: number[], expected: number[], digits: number = 2) {
   if (received.length !== expected.length) {
@@ -34,7 +34,7 @@ expect.extend({
 const anyExpect = expect as any;
 
 test('findIndex', () => {
-  const nodes: FunctionNode[] = [ 
+  const nodes: BaseNode[] = [ 
     {value: 0.0}, // index = 0
     {value: 0.1}, // index = 1
     {value: 0.2}, // index = 2

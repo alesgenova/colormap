@@ -1,6 +1,6 @@
-import { FunctionNode, Mixer, Vec2 } from './types';
+import { BaseNode, Mixer, Vec2 } from './types';
 
-export function findIndex(nodes: FunctionNode[], value: number, start: number, stop: number): number {
+export function findIndex<T>(nodes: BaseNode[], value: number, start: number, stop: number): number {
   // Find the index in the color array for which
   // nodes[index].value <= value < nodes[index + 1]
   if (stop <= start) {
