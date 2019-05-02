@@ -75,22 +75,45 @@ When the scalar value is between two colormap nodes, we can have several strateg
 
 The signature of the mixer function is: `function(value: number, lowerNodeValue: number, upperNodeValue: number) : [number, number]`.
 
-Four mixers are provided for convenience:
+Four mixers are provided for convenience.
+```javascript
+import { linearMixer, roundMixer, floorMixer, ceilMixer } from '@colormap/core';
+
+let colors = [[1, 0, 0], [1, 1, 0], [0, 1, 0], [0, 1, 1], [0, 0, 1]];
+let scale = linearScale([0, 1], [0, 1]);
+let colorMap = createColorMap(colors, scale, linearMixer);
+```
+Below is the effect these mixers have on the same 5-node colormap:
 - `linearMixer` (default)
-<img style="width: 100%; height: 1rem;" src='img/linear_mixer.png'/>
+<img style="width: 100%; height: 0.5rem;" src='img/linear_mixer.png'/>
 - `roundMixer`
-<img style="width: 100%; height: 1rem;" src='img/round_mixer.png'/>
+<img style="width: 100%; height: 0.5rem;" src='img/round_mixer.png'/>
+- `floorMixer`
+<img style="width: 100%; height: 0.5rem;" src='img/floor_mixer.png'/>
+- `ceilMixer`
+<img style="width: 100%; height: 0.5rem;" src='img/ceil_mixer.png'/>
 
 ## Preset Colormaps
-A set of popular colormaps from `matplotlib` are exported by the `@colormap/presets` package. See `packages/presets/src/index.ts` for a list of available presets.
+A set of popular colormaps from `matplotlib` are exported by the `@colormap/presets` package.
 ```javascript
 import { createColorMap, linearScale } from "@colormap/core";
-import { VIRIDIS } from "@colormap/presets";
+import { viridis, cividis, plasma, inferno, magma, blackWhite } from "@colormap/presets";
 
-let domain = [0, 100];
-let range = [0, 1];
-let scale = linearScale(VIRIDIS, range);
-let colorMap = createColorMap(colors, scale);
-let output = [0, 1].map(v => colorMap(v));
-// output is [[0.267004, 0.004874, 0.329415], [0.993248, 0.906157, 0.143936]]
+let scale = linearScale([0, 100], [0, 1]);
+let colorMap = createColorMap(viridis, scale);
+console.log([0, 100].map(v => colorMap(v)));
+// [[0.267004, 0.004874, 0.329415], [0.993248, 0.906157, 0.143936]]
 ```
+
+- `viridis`
+<img style="width: 100%; height: 0.5rem;" src='img/viridis.png'/>
+- `cividis`
+<img style="width: 100%; height: 0.5rem;" src='img/cividis.png'/>
+- `plasma`
+<img style="width: 100%; height: 0.5rem;" src='img/plasma.png'/>
+- `inferno`
+<img style="width: 100%; height: 0.5rem;" src='img/inferno.png'/>
+- `magma`
+<img style="width: 100%; height: 0.5rem;" src='img/magma.png'/>
+- `blackWhite`
+<img style="width: 100%; height: 0.5rem;" src='img/blackWhite.png'/>
