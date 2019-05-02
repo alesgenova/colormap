@@ -70,6 +70,17 @@ console.log(values.map(v => colorMap(v)));
 // [[0, 0, 1], [0.75, 0, 0.25], [0, 1, 0], [0, 0.5, 0.5], [0, 0, 1]]
 ```
 
+### Node Mixers
+When the scalar value is between two colormap nodes, we can have several strategies to mix the colors in the two nodes. By default a linear interpolation between nodes will be done. But this behavior can be overridden by passing a function as a third parameter to `createColorMap(colors, scale, mixer)`.
+
+The signature of the mixer function is: `function(value: number, lowerNodeValue: number, upperNodeValue: number) : [number, number]`.
+
+Four mixers are provided for convenience:
+- `linearMixer` (default)
+<img style="width: 100%; height: 1rem;" src='img/linear_mixer.png'/>
+- `roundMixer`
+<img style="width: 100%; height: 1rem;" src='img/round_mixer.png'/>
+
 ## Preset Colormaps
 A set of popular colormaps from `matplotlib` are exported by the `@colormap/presets` package. See `packages/presets/src/index.ts` for a list of available presets.
 ```javascript
