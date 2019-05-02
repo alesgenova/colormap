@@ -6,14 +6,7 @@
 # ColorMap
 A flexible library to map numerical values to colors
 
-<img style="width: 12.25%;" src='img/fruit_blackWhite.png'/>
-<img style="width: 12.25%;" src='img/fruit_blackWhite_inverse.png'/>
-<img style="width: 12.25%;" src='img/fruit_viridis_transparent.png'/>
-<img style="width: 12.25%;" src='img/fruit_viridis.png'/>
-<img style="width: 12.25%;" src='img/fruit_cividis.png'/>
-<img style="width: 12.25%;" src='img/fruit_plasma.png'/>
-<img style="width: 12.25%;" src='img/fruit_magma.png'/>
-<img style="width: 12.25%;" src='img/fruit_inferno_inverse.png'/>
+<img src='img/demo.png'/>
 
 ## Packages
 | Package | Version | Description |
@@ -94,13 +87,16 @@ let colorMap = createColorMap(colors, scale, linearMixer);
 ```
 Below is the effect these mixers have on the same 5-node colormap:
 - `linearMixer` (default)
-<img style="width: 100%; height: 0.5rem;" src='img/linear_mixer.png'/>
+<img src='img/linear_mixer.png'/>
+
 - `roundMixer`
-<img style="width: 100%; height: 0.5rem;" src='img/round_mixer.png'/>
+<img src='img/round_mixer.png'/>
+
 - `floorMixer`
-<img style="width: 100%; height: 0.5rem;" src='img/floor_mixer.png'/>
+<img src='img/floor_mixer.png'/>
+
 - `ceilMixer`
-<img style="width: 100%; height: 0.5rem;" src='img/ceil_mixer.png'/>
+<img src='img/ceil_mixer.png'/>
 
 ## Preset Colormaps
 A set of popular colormaps from `matplotlib` are exported by the `@colormap/presets` package.
@@ -115,14 +111,19 @@ console.log([0, 100].map(v => colorMap(v)));
 ```
 
 - `viridis`
-<img style="width: 100%; height: 0.5rem;" src='img/viridis.png'/>
+<img src='img/viridis.png'/>
+
 - `cividis`
-<img style="width: 100%; height: 0.5rem;" src='img/cividis.png'/>
+<img src='img/cividis.png'/>
+
 - `plasma`
-<img style="width: 100%; height: 0.5rem;" src='img/plasma.png'/>
+<img src='img/plasma.png'/>
+
 - `inferno`
-<img style="width: 100%; height: 0.5rem;" src='img/inferno.png'/>
+<img src='img/inferno.png'/>
+
 - `magma`
-<img style="width: 100%; height: 0.5rem;" src='img/magma.png'/>
+<img src='img/magma.png'/>
+
 - `blackWhite`
-<img style="width: 100%; height: 0.5rem;" src='img/blackWhite.png'/>
+<img src='img/blackWhite.png'/>
