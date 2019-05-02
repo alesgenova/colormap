@@ -1,6 +1,6 @@
 {
   "name": "@colormap/presets",
-  "version": "0.1.0-3",
+  "version": "0.1.0-4",
   "description": "Flexible library to map scalar values to colors",
   "main": "dist/index.umd.js",
   "module": "dist/index.esm.js",
