@@ -6,6 +6,15 @@
 # ColorMap
 A flexible library to map numerical values to colors
 
+<img style="width: 12.25%;" src='img/fruit_blackWhite.png'/>
+<img style="width: 12.25%;" src='img/fruit_blackWhite_inverse.png'/>
+<img style="width: 12.25%;" src='img/fruit_viridis_transparent.png'/>
+<img style="width: 12.25%;" src='img/fruit_viridis.png'/>
+<img style="width: 12.25%;" src='img/fruit_cividis.png'/>
+<img style="width: 12.25%;" src='img/fruit_plasma.png'/>
+<img style="width: 12.25%;" src='img/fruit_magma.png'/>
+<img style="width: 12.25%;" src='img/fruit_inferno_inverse.png'/>
+
 ## Packages
 | Package | Version | Description |
 | ------- | ------- |:-----:|
