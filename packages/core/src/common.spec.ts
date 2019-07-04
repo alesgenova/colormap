@@ -75,7 +75,7 @@ test('findIndex', () => {
 
 test('linearMixer', () => {
   const precision = 6;
-  let coefficients: Vec2;
+  let coefficients: Vec2<number>;
 
   coefficients = linearMixer(0.6, 0.6, 0.7);
   anyExpect(coefficients).toEachBeCloseTo([1, 0], precision);
@@ -92,7 +92,7 @@ test('linearMixer', () => {
 
 test('floorMixer', () => {
   const precision = 6;
-  let coefficients: Vec2;
+  let coefficients: Vec2<number>;
 
   coefficients = floorMixer(0.6, 0.6, 0.7);
   anyExpect(coefficients).toEachBeCloseTo([1, 0], precision);
@@ -109,7 +109,7 @@ test('floorMixer', () => {
 
 test('ceilMixer', () => {
   const precision = 6;
-  let coefficients: Vec2;
+  let coefficients: Vec2<number>;
 
   coefficients = ceilMixer(0.6, 0.6, 0.7);
   anyExpect(coefficients).toEachBeCloseTo([0, 1], precision);
@@ -126,7 +126,7 @@ test('ceilMixer', () => {
 
 test('roundMixer', () => {
   const precision = 6;
-  let coefficients: Vec2;
+  let coefficients: Vec2<number>;
 
   coefficients = roundMixer(0.6, 0.6, 0.7);
   anyExpect(coefficients).toEachBeCloseTo([1, 0], precision);
