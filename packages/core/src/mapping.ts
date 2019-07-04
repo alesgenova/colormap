@@ -5,11 +5,11 @@ import {
 } from './types';
 import { linearMixer, findIndex } from './common';
 
-function isNode<T>(node: any | MapNode<T>) : node is MapNode<T> {
+function isNode<T>(node: T | MapNode<T>) : node is MapNode<T> {
   return (<MapNode<T>>node).value !== undefined && (<MapNode<T>>node).mapped !== undefined;
 }
 
-function isNodeArray<T>(nodes: any[] | MapNode<T>[]) : nodes is MapNode<T>[] {
+function isNodeArray<T>(nodes: T[] | MapNode<T>[]) : nodes is MapNode<T>[] {
   return nodes.length > 0 && isNode(nodes[0]);
 }
 

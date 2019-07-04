@@ -20,20 +20,20 @@ export function findIndex<T>(nodes: BaseNode[], value: number, start: number, st
   }
 }
 
-export const linearMixer: Mixer = (value: number, lowerNodeValue: number, upperNodeValue: number) : Vec2 => {
+export const linearMixer: Mixer = (value: number, lowerNodeValue: number, upperNodeValue: number) : Vec2<number> => {
   const frac = (value - lowerNodeValue) / (upperNodeValue - lowerNodeValue);
   return [1 - frac, frac];
 }
 
-export const floorMixer: Mixer = (_value: number, _lowerNodeValue: number, _upperNodeValue: number) : Vec2 => {
+export const floorMixer: Mixer = (_value: number, _lowerNodeValue: number, _upperNodeValue: number) : Vec2<number> => {
   return [1, 0];
 }
 
-export const ceilMixer: Mixer = (_value: number, _lowerNodeValue: number, _upperNodeValue: number) : Vec2 => {
+export const ceilMixer: Mixer = (_value: number, _lowerNodeValue: number, _upperNodeValue: number) : Vec2<number> => {
   return [0, 1];
 }
 
-export const roundMixer: Mixer = (value: number, lowerNodeValue: number, upperNodeValue: number) : Vec2 => {
+export const roundMixer: Mixer = (value: number, lowerNodeValue: number, upperNodeValue: number) : Vec2<number> => {
   if (value - lowerNodeValue < upperNodeValue - value) {
     return [1, 0];
   } else {
