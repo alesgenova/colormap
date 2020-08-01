@@ -17,12 +17,12 @@ A flexible library to map numerical values to colors
 ## Install
 Install the `@colormap/core` package
 ```
-npm install -S @colormap/core
+npm install @colormap/core
 ```
 
 Optionally install `@colormap/preset` to have popular colormaps from [matplotlib](https://matplotlib.org/tutorials/colors/colormaps.html) readily available
 ```
-npm install -S @colormap/preset
+npm install @colormap/preset
 ```
 
 ## Basic Usage
